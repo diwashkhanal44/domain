@@ -12,18 +12,42 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
-
-header, section, footer {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+}
+
+header {
     margin-bottom: 20px;
 }
 
-h1, h2 {
-    color: #333;
+h1 {
+    color: #007bff;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
 }
 
 a {
@@ -36,22 +60,8 @@ a:hover {
     color: #0056b3;
 }
 
-ul, ol {
-    padding-left: 20px;
-}
-
-.work-experience p, .education p, .apps ol, .projects ol, .interests ol {
-    margin: 5px 0;
-}
-
 footer {
     text-align: center;
     font-size: 0.9em;
     color: #666;
-}
-
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
 }

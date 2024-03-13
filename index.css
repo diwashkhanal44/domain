@@ -1,14 +1,23 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header, section, footer {
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -18,17 +27,31 @@ h1, h2 {
 }
 
 a {
-    color: blue;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: darkblue;
+    color: #0056b3;
 }
 
-ol {
-    list-style-type: decimal;
+ul, ol {
+    padding-left: 20px;
 }
 
 .work-experience p, .education p, .apps ol, .projects ol, .interests ol {
     margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
 }

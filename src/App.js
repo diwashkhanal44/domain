@@ -5,6 +5,9 @@ import {fetchData} from './api'
 
 import coronaImage from './images/covid-19.jpg';
 
+App = () => "<h1>div>Diwash</h1>";
+/*
+
 class App extends React.Component{
     state = {
         data:{},
@@ -31,5 +34,6 @@ class App extends React.Component{
         );
     }
 }
+*/
 
 export default App;

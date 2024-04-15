@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Education</title>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="education">
+        <a href="https://www.ioepc.edu.np/" class="education-card">
+            <section >
+                <p>BE (Computer Engineering) - 2015 - 2019 - Purwanchal Campus, TU, Nepal</p>
+            </section>
+        </a>
+        <a href="https://www.utas.edu.au/" class="education-card">
+            <section>
+                <p>MIT (Cybersecurity) - 2022 - Present - University of Tasmania</p>
+            </section>
+        </a>
+    </div>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarPlaceholder = document.getElementById("navbar-placeholder");
+            fetch('./navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    navbarPlaceholder.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching navbar:', error);
+                });
+        });
+    </script>
+    
+</body>
+</html>

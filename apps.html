@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Apps</title>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="apps">
+    <a href="https://play.google.com/store/search?q=swftea&c=apps" class="apps-card">
+        <div>
+            <p>SWFTEA</p>
+        </div>
+    </a>
+    <div class="apps-card">
+        <p>You</p>
+    </div>
+</div>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const navbarPlaceholder = document.getElementById("navbar-placeholder");
+          fetch('./navbar.html')
+              .then(response => response.text())
+              .then(data => {
+                  navbarPlaceholder.innerHTML = data;
+              })
+              .catch(error => {
+                  console.error('Error fetching navbar:', error);
+              });
+      });
+  </script>
+   
+</body>
+</html>

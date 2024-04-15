@@ -1,0 +1,159 @@
+body {
+    background-color: #000000;
+    width:fit-content;
+    height: auto;
+  }
+
+  body h1{
+    color:#FFFFFF;
+  }
+  
+  body h2{
+    color:#9C9C9C; 
+  }
+  .topnav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1B1B1B;
+    height: 70px;
+    width: 1110px;
+    margin-left: 85px;
+    border-radius: 35px;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: #9C9C9C;  
+}
+
+.connect{
+  display: flex;
+  margin-top: 10px;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.connect a{
+  text-decoration: none;
+  color:white;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+
+}
+
+h1{
+  color: white;
+}
+.homepage{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.homepage-image{
+  width: 300px; 
+    height: 300px; 
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.footer{
+  display:flex;
+  justify-content: center;
+
+}
+
+.education{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.education-card {
+  margin: auto;
+  background-color: #1B1B1B;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 400px;
+  height: 200px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  text-decoration: none;
+  color: white;
+}
+
+.experience {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.experience-card {
+  margin-left: 20px;
+  background-color: #1B1B1B;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 200px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  color: white;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.projects-card {
+  margin: auto;
+  background-color: #1B1B1B;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 400px;
+  height: 200px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  text-decoration: none;
+  color: white;
+}
+
+.apps{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.apps-card {
+  margin: auto;
+  background-color: #1B1B1B;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 400px;
+  height: 200px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  text-decoration: none;
+  color: white;
+}
+

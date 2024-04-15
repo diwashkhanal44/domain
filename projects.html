@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Projects</title>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="projects">
+        <a href="https://drive.google.com/file/d/1Qrz6PykNURViG7_wjd9qhy6vs-S5EjdD/view?usp=share_link" class="projects-card">
+                <p>Cricket Player Prediction system</p>
+        </a>
+        <a href="https://drive.google.com/file/d/1OGBjJ6YbFLlxU60VeVOGV1fcvQ85-3Q3/view?usp=share_link" class="projects-card">
+                <p>Handwritten Devanagari character recognition and Narration using deep CNN</p>
+        </a>
+    </div>
+    <div class="projects">
+        <a class="projects-card">Cafe Management system using Laravel (UTAS)</a>
+        <a href="https://drive.google.com/file/d/1e5tBTIk7bLOXyEXm9gllYaCBDYdEGQTJ/view?usp=sharing" class="projects-card">
+                <p>Employee management system using C#</p>
+            
+        </a>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarPlaceholder = document.getElementById("navbar-placeholder");
+            fetch('./navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    navbarPlaceholder.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching navbar:', error);
+                });
+        });
+    </script>
+    
+</body>
+</html>

@@ -43,6 +43,11 @@ body {
   color:white;
 }
 
+.connect i{
+  text-decoration: none;
+  color:white;
+}
+
 .topnav a:hover {
     background-color: #ddd;
 

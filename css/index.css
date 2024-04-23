@@ -1,4 +1,5 @@
 body {
+  display: flexbox;
     background-color: #000000;
     width:fit-content;
     height: auto;

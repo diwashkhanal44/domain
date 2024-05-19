@@ -7,34 +7,29 @@
     <title>Education</title>
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
-    <div class="education">
-        <a href="https://www.ioepc.edu.np/" class="education-card">
-            <section >
+  <div id="navbar-placeholder"></div>
+    <div class="container">
+        <div class="education">
+            <a href="https://www.ioepc.edu.np/" class="card-common">
                 <p>BE (Computer Engineering) - 2015 - 2019 - Purwanchal Campus, TU, Nepal</p>
-            </section>
-        </a>
-        <a href="https://www.utas.edu.au/" class="education-card">
-            <section>
+            </a>
+            <a href="https://www.utas.edu.au/" class="card-common">
                 <p>MIT (Cybersecurity) - 2022 - Present - University of Tasmania</p>
-            </section>
-        </a>
+            </a>
+        </div>
     </div>
-    
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const navbarPlaceholder = document.getElementById("navbar-placeholder");
             fetch('./navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    navbarPlaceholder.innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error fetching navbar:', error);
-                });
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching navbar:', error);
+            });
         });
     </script>
-    
 </body>
 </html>

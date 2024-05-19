@@ -1,165 +1,96 @@
-body {
-  display: flexbox;
-    background-color: #000000;
-    width:fit-content;
-    height: auto;
+@media (min-width: 768px) {
+  .container, .homepage, .education, .experience, .projects, .apps {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
   }
+}
 
-  body h1{
-    color:#FFFFFF;
-  }
-  
-  body h2{
-    color:#9C9C9C; 
-  }
-  .topnav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #1B1B1B;
-    height: 70px;
-    width: 1110px;
-    margin-left: 85px;
-    border-radius: 35px;
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B1B1B;
+  height: 70px;
+  padding: 0 10px;
+  border-radius: 35px;
+  width: 90%;
+  margin: 10px;  
 }
 
 .topnav a {
-    text-decoration: none;
-    color: #9C9C9C;  
-}
-
-.connect{
-  display: flex;
-  margin-top: 10px;
-  margin-left: auto;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
-  color: white;
-}
-
-.connect a{
-  text-decoration: none;
-  color:white;
-}
-
-.connect i{
-  text-decoration: none;
-  color:white;
+  color: #9C9C9C;  
+  padding: 10px;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
+  color: black;
+}
+ .nav-options{
+  flex:4;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 7%;
 
+ }
+.nav-connect {
+  flex:1;
+  align-items: flex-end;
+  justify-content: center;
+ 
 }
 
-h1{
+.connect a, .connect i {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px; 
+}
+
+
+.education a, .projects a, .apps a{
+  text-decoration: none;
+}
+
+.container, .homepage, .education, .experience, .projects, .apps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; 
+}
+
+.card-common {
+  background-color: #1B1B1B;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; 
+  height: 300px; 
+  margin: 10px;
+  text-align: center; 
   color: white;
 }
-.homepage{
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  margin-left: 100px;
-}
+
 
 .homepage-image{
-  width: 300px; 
-    height: 300px; 
-    border-radius: 50%;
-    object-fit: cover; 
+  height:300px;
+  width:300px;
+  justify-content: center;
+  border-radius: 150px;
 }
 
 .footer{
-  display:flex;
   justify-content: center;
-
+  align-items:center;
+  margin-bottom: 10%;
 }
-
-.education{
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-}
-
-.education-card {
-  margin: auto;
-  background-color: #1B1B1B;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-  width: 400px;
-  height: 200px; 
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  text-decoration: none;
-  color: white;
-}
-
-.experience {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  margin-top: 150px;
-}
-
-.experience-card {
-  margin-left: 20px;
-  background-color: #1B1B1B;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  height: 200px; 
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  color: white;
-}
-
-.projects {
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-}
-
-.projects-card {
-  margin: auto;
-  background-color: #1B1B1B;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-  width: 400px;
-  height: 200px; 
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  text-decoration: none;
-  color: white;
-}
-
-.apps{
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-}
-
-.apps-card {
-  margin: auto;
-  background-color: #1B1B1B;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-  width: 400px;
-  height: 200px; 
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  text-decoration: none;
-  color: white;
-}
-

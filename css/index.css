@@ -1,11 +1,3 @@
-@media (min-width: 768px) {
-  .container, .homepage, .education, .experience, .projects, .apps {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-  }
-}
 
 body {
   background-color: #000000;

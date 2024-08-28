@@ -7,24 +7,13 @@
 </head>
 <body>
     <div id="navbar-placeholder"></div>
-    <div class="apps">
+    <script src="./js/navbar.js"></script>
+    <div class="container">
         <a href="https://www.coursera.org/account/accomplishments/certificate/V69U4V6CK67U" class="apps-card card-common">
             <p>Data Analysis</p>
         </a>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch('./navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("navbar-placeholder").innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error fetching navbar:', error);
-            });
-        });
-    </script>
-    
+    <div id="footer-container"></div>
+    <script src="./js/footer.js"></script>   
 </body>
 </html>

@@ -8,7 +8,8 @@
 </head>
 <body>
     <div id="navbar-placeholder"></div>
-    <div class="apps">
+    <script src="./js/navbar.js"></script>
+    <div class="container">
         <a href="https://play.google.com/store/search?q=swftea&c=apps" class="apps-card card-common">
             <p>SWFTEA</p>
         </a>
@@ -16,18 +17,7 @@
             <p>You</p>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch('./navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("navbar-placeholder").innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error fetching navbar:', error);
-            });
-        });
-    </script>
+    <div id="footer-container"></div>
+    <script src="./js/footer.js"></script>
 </body>
 </html>

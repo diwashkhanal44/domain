@@ -7,7 +7,7 @@ body {
 }
 
 .topnav {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   background-color: #1B1B1B;
@@ -53,7 +53,7 @@ body {
   text-decoration: none;
 }
 
-.container, .homepage, .education, .experience, .projects, .apps {
+.container{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -62,14 +62,17 @@ body {
 }
 
 .card-common {
+  display:flex;
+  text-decoration: none;
   background-color: #1B1B1B;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; 
-  height: 300px; 
+  width: 200px; 
+  height: 200px; 
   margin: 10px;
-  text-align: center; 
+  justify-content: center;
+  align-items:center;
   color: white;
 }
 
@@ -81,8 +84,13 @@ body {
   border-radius: 150px;
 }
 
-.footer{
+.footer {
+  display: flex;
   justify-content: center;
-  align-items:center;
-  margin-bottom: 10%;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
 }

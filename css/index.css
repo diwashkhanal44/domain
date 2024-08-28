@@ -4,6 +4,7 @@ body {
   color: #FFFFFF;
   margin: 0;
   font-family: Arial, sans-serif;
+  min-height: 100vh;
 }
 
 .topnav {
@@ -48,10 +49,6 @@ body {
   margin-right: 10px; 
 }
 
-
-.education a, .projects a, .apps a{
-  text-decoration: none;
-}
 
 .container{
   display: flex;

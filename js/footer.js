@@ -4,3 +4,5 @@ const footerContainer = document.getElementById('footer-container');
       .then(html => {
           footerContainer.innerHTML = html;
       });
+
+      window.onload = loadPortfolioData;

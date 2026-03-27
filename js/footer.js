@@ -5,4 +5,4 @@ const footerContainer = document.getElementById('footer-container');
           footerContainer.innerHTML = html;
       });
 
-      window.onload = loadPortfolioData;
+    

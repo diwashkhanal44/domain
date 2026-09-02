@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <title>Diwash Khanal Portfolio</title>
-  <script src="./js/navbar.js" defer></script>
-  <script src="./js/loadHomepageData.js"></script>
-  <script src="./js/footer.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Diwash Khanal — Cybersecurity Graduate</title>
+  <script src="./js/main.js" defer></script>
 </head>
-<body>
-  <div id = "navbar-placeholder"></div>
-  <div class="container">
-    <section style="width: 40vw;">
-      <h1 id="portfolio-name">Loading...</h1>
-      <h2 id="portfolio-bio"></h2>
-    </section>
-    <section style="width: 40vw; margin-left: 20px;">
-      <img id="portfolio-img" class="homepage-image" src="" alt="Profile Image" />
-    </section>
-</div>
-  <div id="footer-container"></div>
-  
+<body class="light-theme">
+
+  <header class="topnav">
+    <div class="nav-container">
+      <nav class="nav-options">
+        <a href="#homepage" data-view="homepage" class="active">Home</a>
+        <a href="#experience" data-view="experience">Experience</a>
+        <a href="#education" data-view="education">Education</a>
+        <a href="#projects" data-view="projects">Projects</a>
+        <a href="#certifications" data-view="certifications">Certifications</a>
+      </nav>
+      <div class="nav-connect">
+        <a href="mailto:diwashkhanal44@gmail.com" aria-label="Email / Contact"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/diwashkhanal44" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/d-khanal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="content-area">
+    </main>
+
+  <footer class="footer">
+    &copy; 2026 Diwash Khanal — Built with precision &amp; hosted on GitHub Pages
+  </footer>
+
 </body>
 </html>

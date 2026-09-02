@@ -1,95 +1,292 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent: #0284c7;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
 
-body {
-  position: relative;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body.light-theme {
   display: flex;
   flex-direction: column;
-  background-color: #000000;
-  color: #FFFFFF;
-  margin: 0;
-  font-family: Arial, sans-serif;
   min-height: 100vh;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* Header Navbar */
 .topnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.nav-options {
+  display: flex;
+  gap: 8px;
+}
+
+.topnav .nav-options a {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.topnav .nav-options a:hover,
+.topnav .nav-options a.active {
+  color: #ffffff;
+  background-color: var(--accent);
+}
+
+.nav-connect {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-connect a {
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.nav-connect a:hover {
+  color: var(--accent);
+}
+
+/* Dynamic Views System */
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+/* Hero Banner Styling */
+.banner-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-banner-img {
+  width: 100%;
+  min-height: 280px;
+  max-height: 420px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Home Section Text Layout */
+.hero-text-content {
+  padding: 8px 0;
+}
+
+.hero-text-content h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin: 0 0 4px;
+  color: var(--text);
+}
+
+.hero-role {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.hero-tagline {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin: 0 0 24px;
+  font-style: italic;
+}
+
+.hero-tagline span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero-bio {
+  color: #334155;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 850px;
+}
+
+.hero-highlights {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pill {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  background-color: #1B1B1B;
-  height: 70px;
-  padding: 0 10px;
-  border-radius: 35px;
-  width: 90%;
-  margin: 10px;  
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  background-color: transparent;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 8px;
 }
 
-.topnav a {
-  text-decoration: none;
-  color: #9C9C9C;  
-  padding: 10px;
+.pill i {
+  color: var(--accent);
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
- .nav-options{
-  flex:4;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 7%;
-
- }
-.nav-connect {
-  flex:1;
-  align-items: flex-end;
-  justify-content: center;
- 
+/* Other Sections Layout */
+.page-heading h2 {
+  font-size: 28px;
+  color: var(--text);
+  margin: 0 0 8px;
 }
 
-.connect a, .connect i {
-  color: white;
-  text-decoration: none;
-  margin-right: 10px; 
+.page-heading p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
 }
 
-
-.container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px; 
-  height: auto;
+/* Standardised Grid & Cards System */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
 }
 
-.card-common {
-  display:flex;
-  text-decoration: none;
-  background-color: #1B1B1B;
-  border-radius: 10px;
+.square-card {
+  aspect-ratio: 4 / 3;
+  min-height: 240px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 200px; 
-  height: 200px; 
-  margin: 10px;
-  justify-content: center;
-  align-items:center;
-  color: white;
-}
-
-
-.homepage-image{
-  height:300px;
-  width:300px;
-  justify-content: center;
-  border-radius: 150px;
-}
-
-.footer {
+  border-radius: 14px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.square-card.clickable:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+  color: var(--text);
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.card-sub {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 13px;
+}
+
+.entry-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.card-link-text {
+  display: inline-flex;
   align-items: center;
-  position: absolute;
-  bottom: 10px;
-  left: 0px;
-  right: 0px;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: auto;
+}
+
+/* Specific Image Fix for Certificate Card to maintain uniform aspect ratio */
+.cert-card {
+  padding: 16px;
+}
+
+.cert-img-wrapper {
+  width: 100%;
+  height: 85px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  background-color: #f1f5f9;
+}
+
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Footer Pinning Rules */
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 24px 0;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg);
+  width: 100%;
 }

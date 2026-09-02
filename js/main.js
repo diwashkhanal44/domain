@@ -8,8 +8,7 @@ function initDynamicTabs() {
 
   async function loadTab(tabName) {
     try {
-      // Added leading slash to fetch from the absolute domain root
-      const response = await fetch(`/tabs/${tabName}.html`);
+      const response = await fetch(`../tabs/${tabName}.html`);
       if (!response.ok) {
         throw new Error(`Failed to load tab: ${tabName} (Status: ${response.status})`);
       }
@@ -42,7 +41,7 @@ function initDynamicTabs() {
 async function loadHomepageData() {
   try {
     // Added leading slash for root-absolute path
-    const response = await fetch('/data/homepageData.json');
+    const response = await fetch('../data/homepageData.json');
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function initDynamicTabs() {
   const navButtons = document.querySelectorAll('.nav-options button');
   const contentArea = document.getElementById('content-area');
-  const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
   async function loadTab(tabName) {
     try {
-      const response = await fetch(`${basePath}tabs/${tabName}.html`);
+      const response = await fetch(`tabs/${tabName}.html`);
       if (!response.ok) {
         throw new Error(`Failed to load tab: ${tabName}`);
       }
@@ -21,7 +20,7 @@ function initDynamicTabs() {
       }
     } catch (error) {
       console.error(error);
-      contentArea.innerHTML = `<p style="color:red;">Error loading tab. Check if 'tabs/' folder is uploaded to GitHub.</p>`;
+      contentArea.innerHTML = `<p style="color:red;">Error loading tab. Check if the 'tabs' folder is uploaded to GitHub.</p>`;
     }
   }
 
@@ -41,8 +40,7 @@ function initDynamicTabs() {
 
 async function loadHomepageData() {
   try {
-    const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
-    const response = await fetch(`${basePath}data/homepageData.json`);
+    const response = await fetch('data/homepageData.json');
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -60,8 +58,7 @@ async function loadHomepageData() {
 
     const imgEl = document.querySelector('.hero-banner-img');
     if (imgEl && data.image) {
-      const cleanPath = data.image.startsWith('./') ? data.image.substring(2) : data.image;
-      imgEl.src = basePath + cleanPath;
+      imgEl.src = data.image.startsWith('./') ? data.image.substring(2) : data.image;
     }
 
   } catch (error) {

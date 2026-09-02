@@ -119,10 +119,15 @@ a {
 
 .hero-banner-img {
   width: 100%;
-  min-height: 280px;
-  max-height: 420px;
+  height: 200px;
   display: block;
   object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .hero-banner-img {
+    height: 350px;
+  }
 }
 
 /* Home Section Text Layout */

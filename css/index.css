@@ -66,17 +66,21 @@ a {
   gap: 8px;
 }
 
-.topnav .nav-options a {
+.topnav .nav-options button {
+  background: none;
+  border: none;
+  cursor: pointer;
   color: var(--text-muted);
   font-size: 14px;
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 8px;
   transition: all 0.2s ease;
+  font-family: var(--font-sans);
 }
 
-.topnav .nav-options a:hover,
-.topnav .nav-options a.active {
+.topnav .nav-options button:hover,
+.topnav .nav-options button.active {
   color: #ffffff;
   background-color: var(--accent);
 }
@@ -255,7 +259,7 @@ a {
   margin-top: auto;
 }
 
-/* Specific Image Fix for Certificate Card to maintain uniform aspect ratio */
+/* Specific Image Fix for Certificate Card */
 .cert-card {
   padding: 16px;
 }

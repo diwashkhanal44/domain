@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initDynamicTabs() {
-  const navLinks = document.querySelectorAll('.nav-options a');
+  const navButtons = document.querySelectorAll('.nav-options button');
   const contentArea = document.getElementById('content-area');
 
   async function loadTab(tabName) {
@@ -24,19 +24,17 @@ function initDynamicTabs() {
     }
   }
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', async (e) => {
-      e.preventDefault();
-      const targetView = link.getAttribute('data-view');
+  navButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const targetView = button.getAttribute('data-view');
 
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
+      navButtons.forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
 
       await loadTab(targetView);
     });
   });
 
-  // Default initial load points to homepage.html
   loadTab('homepage');
 }
 

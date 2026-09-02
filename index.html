@@ -7,8 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <title>Diwash Khanal — Cybersecurity Graduate</title>
+  <title>Diwash Khanal</title>
   <script src="./js/main.js" defer></script>
+  <script>
+    // Automatically fix CSS path for GitHub Pages subfolders
+    const path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = path + 'css/index.css';
+    document.head.appendChild(link);
+  </script>
 </head>
 <body class="light-theme">
 

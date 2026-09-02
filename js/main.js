@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function initDynamicTabs() {
   const navButtons = document.querySelectorAll('.nav-options button');
   const contentArea = document.getElementById('content-area');
-
-  // Automatically find the correct folder path for GitHub Pages or local server
   const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
   async function loadTab(tabName) {
@@ -23,7 +21,7 @@ function initDynamicTabs() {
       }
     } catch (error) {
       console.error(error);
-      contentArea.innerHTML = `<p style="color:red;">Error loading tab. Press F12 to check Console.</p>`;
+      contentArea.innerHTML = `<p style="color:red;">Error loading tab. Check if 'tabs/' folder is uploaded to GitHub.</p>`;
     }
   }
 

@@ -8,9 +8,10 @@ function initDynamicTabs() {
 
   async function loadTab(tabName) {
     try {
-      const response = await fetch(`tabs/${tabName}.html`);
+      // Added leading slash to fetch from the absolute domain root
+      const response = await fetch(`/tabs/${tabName}.html`);
       if (!response.ok) {
-        throw new Error(`Failed to load tab: ${tabName}`);
+        throw new Error(`Failed to load tab: ${tabName} (Status: ${response.status})`);
       }
       const htmlContent = await response.text();
       contentArea.innerHTML = htmlContent;
@@ -20,7 +21,7 @@ function initDynamicTabs() {
       }
     } catch (error) {
       console.error(error);
-      contentArea.innerHTML = `<p style="color:red;">Error loading tab. Check if the 'tabs' folder is uploaded to GitHub.</p>`;
+      contentArea.innerHTML = `<p style="color:red; font-family:monospace;">Error loading tab '${tabName}'. Make sure the 'tabs' folder is pushed to GitHub root.</p>`;
     }
   }
 
@@ -40,7 +41,8 @@ function initDynamicTabs() {
 
 async function loadHomepageData() {
   try {
-    const response = await fetch('data/homepageData.json');
+    // Added leading slash for root-absolute path
+    const response = await fetch('/data/homepageData.json');
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
